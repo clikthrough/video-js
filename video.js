@@ -581,7 +581,7 @@ VideoJS.player.extend({
     this.activateElement(this.controls, "mouseOverVideoReporter");
 
     // Build the play control
-    this.playControl = _V_.createButton({ className: "vjs-play-control", innerHTML: "<span></span>" });
+    this.playControl = _V_.createButton({ className: "vjs-play-control", innerHTML: "<span class='tx'>"+this.options.textPlay+"</span>" });
     this.controls.appendChild(this.playControl);
     this.activateElement(this.playControl, "playToggle");
 
@@ -636,7 +636,7 @@ VideoJS.player.extend({
     // Crete the fullscreen control
     this.fullscreenControl = _V_.createButton({
       className: "vjs-fullscreen-control",
-      innerHTML: "<div><span></span><span></span><span></span><span></span></div>"
+      innerHTML: "<div><span class='tx'>"+this.options.textFullscreen+"</span><span></span><span></span><span></span></div>"
     });
     this.controls.appendChild(this.fullscreenControl);
     this.activateElement(this.fullscreenControl, "fullscreenToggle");
@@ -667,7 +667,7 @@ VideoJS.player.extend({
     */
     this.bigPlayButton = _V_.createButton({
       className: "vjs-big-play-button",
-      innerHTML: "<span></span>"
+      innerHTML: "<span class='tx'>"+this.options.textPlay+"</span>"
     });
     this.box.appendChild(this.bigPlayButton);
     this.activateElement(this.bigPlayButton, "bigPlayButton");
@@ -677,7 +677,7 @@ VideoJS.player.extend({
   buildAndActivateSpinner: function(){
     this.spinner = _V_.createElement("div", {
       className: "vjs-spinner",
-      innerHTML: "<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>"
+      innerHTML: "<div tx='tx'>"+this.options.textLoading+"</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>"
     });
     this.box.appendChild(this.spinner);
     this.activateElement(this.spinner, "spinner");
