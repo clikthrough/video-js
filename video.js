@@ -1567,6 +1567,13 @@ VideoJS.extend({
   createElement: function(tagName, attributes){
     return this.merge(document.createElement(tagName), attributes);
   },
+  // Accessibility: ensure we can perveive, tab to, and activate buttons (eg. in JAWS/NDVA screen reader).
+  createButton: function(attributes){
+    var btn = this.merge(document.createElement("div"), attributes);
+    btn.setAttribute("role", "button");
+    btn.setAttribute("tabindex", 0);
+    return btn;
+  },
 
   // Attempt to block the ability to select text while dragging controls
   blockTextSelection: function(){
