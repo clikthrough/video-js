@@ -577,7 +577,7 @@ VideoJS.player.extend({
     this.activateElement(this.controls, "mouseOverVideoReporter");
 
     // Build the play control
-    this.playControl = _V_.createElement("div", { className: "vjs-play-control", innerHTML: "<span></span>" });
+    this.playControl = _V_.createButton({ className: "vjs-play-control", innerHTML: "<span></span>" });
     this.controls.appendChild(this.playControl);
     this.activateElement(this.playControl, "playToggle");
 
@@ -630,7 +630,7 @@ VideoJS.player.extend({
     this.activateElement(this.volumeDisplay, "volumeDisplay");
 
     // Crete the fullscreen control
-    this.fullscreenControl = _V_.createElement("div", {
+    this.fullscreenControl = _V_.createButton({
       className: "vjs-fullscreen-control",
       innerHTML: "<div><span></span><span></span><span></span><span></span></div>"
     });
@@ -661,7 +661,7 @@ VideoJS.player.extend({
     /* Creating this HTML
       <div class="vjs-big-play-button"><span></span></div>
     */
-    this.bigPlayButton = _V_.createElement("div", {
+    this.bigPlayButton = _V_.createButton({
       className: "vjs-big-play-button",
       innerHTML: "<span></span>"
     });
