@@ -55,7 +55,11 @@ var VideoJS = JRClass.extend({
       defaultVolume: 0.85, // Will be overridden by localStorage volume if available
       playerFallbackOrder: ["html5", "flash", "links"], // Players and order to use them
       flashPlayer: "htmlObject",
-      flashPlayerVersion: false // Required flash version for fallback
+      flashPlayerVersion: false, // Required flash version for fallback
+      textLoading: "Loading", //Localizable text strings
+      textPlay: "Play",
+      textPause:"Pause",
+      textFullscreen: "Full screen"
     };
     // Override default options with global options
     if (typeof VideoJS.options == "object") { _V_.merge(this.options, VideoJS.options); }
